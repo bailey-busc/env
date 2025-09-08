@@ -1,0 +1,10 @@
+.aider*
+result
+result-*
+*.nar
+.direnv
+*.secret.*
+target
+.qmlls.ini
+**/.venv
+**/__pycache__

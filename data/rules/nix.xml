@@ -1,0 +1,8 @@
+<rules>
+     <rule name="Always use Flakes">
+        Always use flakes when questions arise on how to implement something in Nix, with respect to project management. The outdated channels approach is to be avoided and generally consider to be unsupported.
+     </rule>
+     <rule>
+
+     </rule>
+</rules>

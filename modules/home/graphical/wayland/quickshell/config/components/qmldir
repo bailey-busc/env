@@ -1,0 +1,6 @@
+module bshell.components
+singleton Time 1.0 Time.qml
+singleton Theme 1.0 Theme.qml
+singleton Vdesk 1.0 Vdesk.qml
+Shortcut 1.0 Shortcut.qml
+singleton Notifications 1.0 Notifications.qml
