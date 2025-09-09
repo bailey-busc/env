@@ -5,6 +5,7 @@
   inputs',
   inputs,
   config,
+  self,
   ...
 }:
 let
@@ -16,7 +17,11 @@ mkIf profiles.personal.enable {
     packages = with pkgs; [
       # :D
       (pkgs.callPackage ./wrapper.nix {
-        bitwig-studio-unwrapped = (pkgs.callPackage ./bitwig-6.nix { src = "${inputs.lfs}/bws6.deb"; });
+        bitwig-studio-unwrapped = (
+          pkgs.callPackage ./bitwig-6.nix {
+            src = "${(import "${self}/data" { inherit (pkgs) fetchgit; }).assets}/bws6.deb";
+          }
+        );
       })
       helm
       helm

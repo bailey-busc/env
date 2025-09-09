@@ -1,4 +1,9 @@
-{ lib, inputs, ... }@args:
+{
+  lib,
+  inputs,
+  self,
+  ...
+}@args:
 let
   inherit (builtins)
     all
@@ -23,6 +28,9 @@ let
     splitString
     toLower
     ;
+
+  assetsGit =
+    (import "${self}/data" { inherit (inputs.nixpkgs.legacyPackages.x86_64-linux) fetchgit; }).assets;
 in
 rec {
   # Import home-manager library functions
@@ -49,7 +57,7 @@ rec {
     # Wallpaper paths with automatic file discovery
     wallpapers =
       let
-        wallpaperDir = "${inputs.lfs}/wallpapers";
+        wallpaperDir = "${assetsGit}/wallpapers";
         # List of supported image file extensions
         validExtensions = [
           "jpg"

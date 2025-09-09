@@ -358,10 +358,5 @@
         utils.follows = "flake-utils";
       };
     };
-
-    lfs = {
-      url = "path:/home/bailey/lfs";
-      flake = false;
-    };
   };
 }

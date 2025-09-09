@@ -1513,19 +1513,6 @@
         "url": "https://flakehub.com/f/nix-community/lanzaboote/0.4.%2A"
       }
     },
-    "lfs": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1756868310,
-        "narHash": "sha256-jjCYNcFomkrN/4Fk7t0Giu6cYS1vvv2fxhf+yeLYNA0=",
-        "path": "/home/bailey/lfs",
-        "type": "path"
-      },
-      "original": {
-        "path": "/home/bailey/lfs",
-        "type": "path"
-      }
-    },
     "lib": {
       "locked": {
         "lastModified": 1754788789,
@@ -2202,7 +2189,6 @@
         "ignis-gvc": "ignis-gvc",
         "jujutsu": "jujutsu",
         "lanzaboote": "lanzaboote",
-        "lfs": "lfs",
         "lib": "lib",
         "mozilla": "mozilla",
         "nil": "nil",
