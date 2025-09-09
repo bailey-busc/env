@@ -13,18 +13,18 @@ let
     ;
   inherit (self.lib) mergeAttrs' mapAttrNames';
 
-  device = throw "Set me";
+  device = "/dev/nvme0n1";
 
   # Sizes
-  rootSizeGb = throw "Set me";
-  tmpSizeGb = throw "Set me";
-  swapSizeGb = throw "Set me";
-  bootSizeGb = throw "Set me";
+  rootSizeGb = 100;
+  tmpSizeGb = 100;
+  swapSizeGb = 48;
+  bootSizeGb = 16;
 
   # ZFS
-  rootPoolName = throw "Set me";
-  rootDatasetName = throw "Set me";
-  userDatasetName = throw "Set me";
+  rootPoolName = "rpool";
+  rootDatasetName = "nixos";
+  userDatasetName = "user";
 in
 {
   disko.devices = {

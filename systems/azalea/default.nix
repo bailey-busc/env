@@ -29,7 +29,7 @@ in
     };
     xserver.videoDrivers = [
       "modesetting"
-      "displaylink"
+      # "displaylink"
     ];
     fwupd.enable = true;
 
@@ -187,8 +187,6 @@ in
           ];
         };
       };
-
-      tui.enable = false; # Enable if TUI monitoring is desired
     };
     displays.eDP-1 = {
       width = 2560;
