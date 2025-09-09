@@ -27,7 +27,10 @@ in
       dockerCompat = !dockerEnabled;
       dockerSocket.enable = !dockerEnabled;
       autoPrune.enable = true;
-      extraPackages = with pkgs; [ gvisor ];
+      extraPackages = with pkgs; [
+        gvisor
+        zfs
+      ];
     };
   };
   hardware.nvidia-container-toolkit.enable = config.hardware.nvidia.enabled;
