@@ -47,7 +47,7 @@ let
   # Sleep command that checks for SSH sessions first
   sleepCommand = pkgs.writeShellScript "conditional-sleep" ''
     if ${sshCheckScript}; then
-        ${getExe' osConfig.systemd.package "systemctl"} sleep
+        ${getExe' osConfig.systemd.package "systemctl"} suspend
     else
         echo "Skipping sleep due to active SSH sessions"
     fi

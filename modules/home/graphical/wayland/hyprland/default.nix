@@ -240,7 +240,10 @@ in
           "minsize 1 1, initialtitle:${hyprLib.selectors.titles.empty}, initialclass:${hyprLib.selectors.classes.steam}"
           "maximize, initialtitle:^(\S+)$, initialclass:^(steamwebhelper)$"
           "immediate, initialclass:${hyprLib.selectors.classes.steamGames}"
-          "fullscreen, initialclass:${hyprLib.selectors.classes.steamGames}"
+          # "fullscreen, initialclass:${hyprLib.selectors.classes.steamGames}"
+          "content game, initialclass:${hyprLib.selectors.classes.steamGames}"
+          "tag +game, initialclass:${hyprLib.selectors.classes.steamGames}"
+          "idleinhibit focus, initialclass:${hyprLib.selectors.classes.steamGames}"
 
           # File picker
           "float, class:^(Show-file-dialog-gtk3)"
